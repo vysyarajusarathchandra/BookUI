@@ -1,6 +1,6 @@
 <div class="register-form p-5 border">
     <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()">
-      <h4>Welcome To BlogSphere</h4> <br>
+      <h4>Welcome To Book App</h4> <br>
         <div class="form-group">
             <label> Full Name</label>
             <input type="text" class="form-control" name="UserName" [(ngModel)]="users.UserName" required minlength="6"
@@ -44,4 +44,5 @@
             <button type="button"(click)="onReset(f)" class="btn-btn-primary float-right">Reset</button>
         </div>
     </form>
+    <p>Already user! Redirect to login page: <button class="btn btn-primary" (click)="redirectToLogin()">Login</button></p>
 </div>

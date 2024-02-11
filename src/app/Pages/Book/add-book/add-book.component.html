@@ -1,1 +1,30 @@
-<p>add-book works!</p>
+<div class="container">
+    <h3>Add Book</h3>
+    <table class="table">
+        <tr>
+            <td>Title</td>
+            <td>
+                <input type="text" [(ngModel)]="books.Title" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Author</td>
+            <td>
+                <textarea [(ngModel)]="books.Author" class="form-control" rows="5"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Genre</td>
+            <td>
+                <input type="text" [(ngModel)]="books.Genre" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>isbn</td>
+            <td>
+                <input type="text" [(ngModel)]="books.isbn" class="form-control">
+            </td>
+        </tr>
+       
+    </table>
+</div>

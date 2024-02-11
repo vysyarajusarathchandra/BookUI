@@ -29,4 +29,7 @@ export class RegisterComponent {
 onReset(form: NgForm): void {
   form.reset();
 }
+redirectToLogin() {
+  this.router.navigateByUrl('login');
+}
 }
