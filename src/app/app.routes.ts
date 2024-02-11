@@ -27,6 +27,6 @@ export const routes: Routes = [
         {path:'get-all-books',component:GetAllBooksComponent},
         {path:'get-book-by-id',component:GetBookByIdComponent}
     ]},
-    {path:'register',component:RegisterComponent},
+    {path:'',component:RegisterComponent},
     {path:'login',component:LoginComponent},
 ];
