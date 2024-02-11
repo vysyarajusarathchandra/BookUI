@@ -32,13 +32,13 @@ onSubmit(): void {
       if (this.httpResponse.token != null) {
         localStorage.setItem('token', this.httpResponse.token);
         localStorage.setItem('userId', this.httpResponse.userId);
-        localStorage.setItem('userRole', this.httpResponse.roleName);
+        localStorage.setItem('userRole', this.httpResponse.role);
         
         localStorage.setItem('userName',this.httpResponse.userName);
-        if (this.httpResponse.roleName == 'User') {
-          this.router.navigateByUrl('user-dashboard/getallposts');
-        } else if (this.httpResponse.roleName == 'Admin') {
-          this.router.navigateByUrl('admin-dashboard/getallposts');
+        if (this.httpResponse.role == 'User') {
+          this.router.navigateByUrl('user-dashboard/get-all-books');
+        } else if (this.httpResponse.role == 'Admin') {
+          this.router.navigateByUrl('admin-dashboard/get-all-books');
         }
       } else {
         this.errMsg = 'Invalid Credentials';

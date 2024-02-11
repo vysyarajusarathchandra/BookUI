@@ -24,9 +24,11 @@ export class AddBookComponent {
   {
   this.books=new Book();
 }
-AddCategory() {
+AddBook() {
   console.log(this.books);
   const userRole = localStorage.getItem("userRole") ?? "Guest";
+  this.books.UserId = parseInt(localStorage.getItem("userId")??"0");
+  this.books.PublishedDate = new Date();
   this.http
   .post('http://localhost:5256/api/Book/AddBook', this.books,this.httpOptions 
     

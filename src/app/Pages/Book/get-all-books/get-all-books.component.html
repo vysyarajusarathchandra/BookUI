@@ -1,1 +1,36 @@
-<p>get-all-books works!</p>
+<!-- Update your component's HTML file (e.g., get-all-books.component.html) -->
+
+<div class="container">
+    <div class="search-bar">
+        <input id="bookTitle" [(ngModel)]="bookTitle" placeholder="Search Books" />
+        <button (click)="searchBookByTitle()">Search</button>
+      </div>
+    <div class="tile" *ngFor="let book of books">
+      <h1>{{ book.title }}</h1>
+      <table>
+        <tr>
+          <th>Author:</th>
+          <td>{{ book.author }}</td>
+        </tr>
+        <tr>
+          <th>Genre:</th>
+          <td>{{book.genre}}</td>
+        </tr>
+        <tr>
+          <th>ISBN:</th>
+          <td>{{ book.isbn }}</td>
+        </tr>
+        <tr>
+          <th>Published Date:</th>
+          <td>{{ book.publishedDate | date:'short' }}</td>
+        </tr>
+      </table>
+      <div *ngIf="isEligible">
+          <button class="btn btn-danger" (click)="delete(book.bookid)">Delete</button>
+          <button class="btn btn-primary" (click)="edit(book.bookid)">Edit</button>
+      </div>
+      <!-- Uncomment the line below if you want to navigate to a details page -->
+      <!-- <button class="btn btn-primary" (click)="getId(book.bookId)">Details</button> -->
+    </div>
+  </div>
+  

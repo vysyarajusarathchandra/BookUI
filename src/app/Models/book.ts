@@ -4,6 +4,6 @@ export class Book {
     public Author?:string;
     public Genre?:string;
     public isbn?:string;
-    public PublishedDate?:string;
+    public PublishedDate?:Date;
     public UserId?:number
 }
